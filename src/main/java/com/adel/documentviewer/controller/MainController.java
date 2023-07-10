@@ -132,7 +132,10 @@ public class MainController implements Initializable {
         refreshTable();
     }
 
-
+    @FXML
+    private void exit(){
+        fxWeaver.shutdown();
+    }
     private List<Document> getSelected(){
         return documentTableView.getItems().filtered(d->d.getCheckbox().isSelected());
     }

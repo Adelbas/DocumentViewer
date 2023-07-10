@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<BorderPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adel.documentviewer.controller.MainController">
+<BorderPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adel.documentviewer.controller.MainController">
    <center>
       <AnchorPane prefHeight="625.0" prefWidth="400.0" BorderPane.alignment="CENTER">
           <children>
@@ -84,7 +77,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="12.0" layoutY="440.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="Выход" AnchorPane.bottomAnchor="40.0">
+            <Button layoutX="12.0" layoutY="440.0" mnemonicParsing="false" onAction="#exit" prefHeight="45.0" prefWidth="150.0" text="Выход" AnchorPane.bottomAnchor="40.0">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

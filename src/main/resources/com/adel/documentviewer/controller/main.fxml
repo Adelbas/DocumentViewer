@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adel.documentviewer.controller.MainController">
+   <center>
+      <AnchorPane prefHeight="625.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+          <children>
+            <TableView fx:id="documentTableView" editable="true" layoutX="26.0" layoutY="33.0" prefHeight="555.0" prefWidth="360.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+              <columns>
+                <TableColumn fx:id="name" editable="false" maxWidth="1000.0" minWidth="135.0" prefWidth="-1.0" sortable="false" text="Документ" />
+                <TableColumn fx:id="date" editable="false" maxWidth="1000.0" minWidth="70.0" prefWidth="-1.0" sortable="false" text="Дата" />
+                  <TableColumn fx:id="number" editable="false" maxWidth="1000.0" minWidth="70.0" prefWidth="-1.0" sortable="false" text="Номер" />
+                  <TableColumn fx:id="checkbox" maxWidth="50.0" minWidth="25.0" prefWidth="30.0" sortable="false" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+          </children>
+      </AnchorPane>
+   </center>
+   <top>
+        <MenuBar prefHeight="25.0" prefWidth="395.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+   </top>
+   <right>
+      <AnchorPane prefHeight="625.0" prefWidth="175.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="12.0" layoutY="23.0" mnemonicParsing="false" onAction="#createConsignment" prefHeight="45.0" prefWidth="150.0" text="Накладная" AnchorPane.topAnchor="23.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="87.0" mnemonicParsing="false" onAction="#createPayment" prefHeight="45.0" prefWidth="150.0" text="Платёжка">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="149.0" mnemonicParsing="false" onAction="#createPaymentRequest" prefHeight="45.0" prefWidth="150.0" text="Заявка на оплату">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="214.0" mnemonicParsing="false" onAction="#saveFile" prefHeight="45.0" prefWidth="150.0" text="Сохранить">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="279.0" mnemonicParsing="false" onAction="#loadFile" prefHeight="45.0" prefWidth="150.0" text="Загрузить">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="341.0" mnemonicParsing="false" onAction="#viewDocument" prefHeight="45.0" prefWidth="150.0" text="Просмотр">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="440.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" text="Выход" AnchorPane.bottomAnchor="40.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="404.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="45.0" prefWidth="150.0" text="Удалить выбранные">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets right="15.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+</BorderPane>
